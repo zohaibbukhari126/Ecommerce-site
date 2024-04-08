@@ -90,12 +90,7 @@
       font-weight: 500;
     }
 
-    .h
-
- 
-
-
-    .container {
+    .h .container {
       max-width: 400px;
       /* Adjust based on your design preference */
       margin: auto;
@@ -104,44 +99,51 @@
     }
 
     .pricing {
-  display: flex;
-  align-items: center;
-  justify-content: start; /* Align items to the start of the container */
-  padding: 10px;
-  margin-top: 20px; /* Space above the pricing */
-  margin-bottom: 20px; /* Space below the pricing */
-  background-color: #ffffff;
-  border-radius: 10px;
-}
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      /* Align items to the start of the container */
+      padding: 10px;
+      margin-top: 20px;
+      /* Space above the pricing */
+      margin-bottom: 20px;
+      /* Space below the pricing */
+      background-color: #ffffff;
+      border-radius: 10px;
+    }
 
-.pricing h4 {
-  color: hsl(0, 0%, 0%);
-  font-size: 2rem; /* Larger font size for price */
-  font-weight: 700; /* Bold font weight */
-  margin-right: 10px; /* Space between the sale price and the discount tag */
-}
+    .pricing h4 {
+      color: hsl(0, 0%, 0%);
+      font-size: 2rem;
+      /* Larger font size for price */
+      font-weight: 700;
+      /* Bold font weight */
+      margin-right: 10px;
+      /* Space between the sale price and the discount tag */
+    }
 
-.pricing h5 {
-  color: hsl(220, 14%, 75%);
-  font-size: 1.1rem; /* Smaller font size for original price */
-  font-weight: 400;
-  text-decoration: line-through;
-  
-  margin-left: 120px;
-   /* Space between the discount tag and the original price */
-}
+    .pricing h5 {
+      color: hsl(220, 14%, 75%);
+      font-size: 1.1rem;
+      /* Smaller font size for original price */
+      font-weight: 400;
+      text-decoration: line-through;
 
-.discount-tag {
-  background-color: hsl(25, 100%, 94%);
-  color: hsl(26, 100%, 55%);
-  padding: 1px 8px;
-  border-radius: 5px;
-  font-weight: 700;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+      margin-left: 120px;
+      /* Space between the discount tag and the original price */
+    }
+
+    .discount-tag {
+      background-color: hsl(25, 100%, 94%);
+      color: hsl(26, 100%, 55%);
+      padding: 1px 8px;
+      border-radius: 5px;
+      font-weight: 700;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
 
 
@@ -156,7 +158,7 @@
     }
 
     .btn-counter {
-      
+
       color: #ff7d1a;
       border: none;
       width: 40px;
@@ -203,7 +205,7 @@
     }
 
     .company {
-      
+
       color: #ff7d1a;
       font-size: 1rem;
       font-weight: 700;
@@ -215,14 +217,53 @@
       color: #000000;
       font-size: 1.5rem;
       font-weight: 700;
-      
+
     }
-      .carousel 
-      {
-        margin-top: 60px;
-        margin-bottom: 20px;
-      }
-    
+
+    .carousel {
+
+      margin-bottom: 20px;
+    }
+
+    .fa-shopping-cart {
+      cursor: pointer;
+    }
+
+
+
+
+    .cart-count-badge {
+      position: absolute;
+      top: 10px;
+      /* Adjust as needed */
+      right: 65px;
+      /* Adjust as needed */
+      background-color: #ff7d1a;
+      color: white;
+      border-radius: 50%;
+      padding: 2px 6px;
+      font-size: 0.75rem;
+      font-weight: bold;
+      display: none;
+      /* Hide by default, will show when items are added to cart */
+
+    }
+
+    .cartbox {
+
+      position: absolute;
+      top: 10px;
+      /* Adjust as needed */
+      right: 65px;
+      /* Adjust as needed */
+      background-color: #ff7d1a;
+      color: white;
+      border-radius: 10px;
+      padding: 2px 6px;
+      font-size: 0.75rem;
+      font-weight: bold;
+      /* Hide by default, will show when items are added to cart */
+    }
 
 
     body {
@@ -269,7 +310,14 @@
       </button>
 
       <a class="navbar-brand col" href="#">Sneakers</a>
-      <i class="fas fa-shopping-cart "></i>
+
+      <button>
+        <a class="fas fa-shopping-cart"><span class="cart-count-badge" onclick="">0
+            <div class="cartbox"> cart is empty</div>
+
+          </span></a>
+      </button>
+
       <!-- profile cicular picture -->
       <img src="
       https://th.bing.com/th?id=OIP.GHGGLYe7gDfZUzF_tElxiQHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2
@@ -313,6 +361,8 @@
 
 
   <div id="carouselExampleIndicators" class="carousel slide">
+
+
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
         aria-current="true" aria-label="Slide 1"></button>
@@ -355,13 +405,13 @@
     <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole,
       they’ll withstand everything the weather can offer.</p>
 
-        <div class="pricing">
-          <h4>$125.00</h4>
-          <div class="discount-tag">50%</div>
-          <h5>$250.00</h5>
-        </div>
-          
-      
+    <div class="pricing">
+      <h4>$125.00</h4>
+      <div class="discount-tag">50%</div>
+      <h5>$250.00</h5>
+    </div>
+
+
     <div class="twos">
       <button class="btn btn-counter minus">-</button>
       <div class="count-display">0</div>
@@ -370,8 +420,6 @@
 
 
     <button class="btn btn-primary">Add to cart</button>
-
-    <!-- ... -->
   </div>
 
 
@@ -394,22 +442,51 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
   <script>
+
     document.addEventListener('DOMContentLoaded', function () {
-    var plusButton = document.querySelector('.plus');
-    var minusButton = document.querySelector('.minus');
-    var countDisplay = document.querySelector('.count-display');
+      var plusButton = document.querySelector('.plus');
+      var minusButton = document.querySelector('.minus');
+      var countDisplay = document.querySelector('.count-display');
+      var addToCartButton = document.querySelector('.btn-primary');
+      var cartCountBadge = document.querySelector('.cart-count-badge');
+      var cartCount = 0;
 
-    plusButton.addEventListener('click', function () {
-      countDisplay.textContent = parseInt(countDisplay.textContent) + 1;
+      plusButton.addEventListener('click', function () {
+        countDisplay.textContent = parseInt(countDisplay.textContent) + 1;
+      });
+
+      minusButton.addEventListener('click', function () {
+        var currentCount = parseInt(countDisplay.textContent);
+        if (currentCount > 0) {
+          countDisplay.textContent = currentCount - 1;
+        }
+      });
+
+      addToCartButton.addEventListener('click', function () {
+        // Add the count to the cart and update the badge
+        var addCount = parseInt(countDisplay.textContent);
+        cartCount += addCount;
+        cartCountBadge.textContent = cartCount;
+
+        // Reset the count display to zero
+        countDisplay.textContent = '0';
+
+        // Show the badge if it's not already visible
+        if (cartCount > 0) {
+          cartCountBadge.style.display = 'block';
+        }
+      });
     });
 
-    minusButton.addEventListener('click', function () {
-      var currentCount = parseInt(countDisplay.textContent);
-      if (currentCount > 0) { // Prevents count going below 0
-        countDisplay.textContent = currentCount - 1;
-      }
-    });
-  });
+
+
+
+
+
+
+
+
+
   </script>
 
 </body>
